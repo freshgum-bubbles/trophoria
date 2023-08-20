@@ -18,8 +18,8 @@ export const bootstrap = () => {
   const env = loadEnvironment();
   const db = createDatabaseConnection(env.DATABASE_URL);
 
-  Container.set({ id: DATABASE, value: db, dependencies: [] });
-  Container.set({ id: ENVIRONMENT, value: env, dependencies: [] });
+  Container.set({ id: DATABASE, value: db });
+  Container.set({ id: ENVIRONMENT, value: env });
 
   const app = new Elysia();
 
